@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FundShield — Emergency Fund Calculator: How Many Months of Cover Do You Have?</title>
+<meta name="description" content="Free emergency fund calculator. See your months of expense cover, staged 1/3/6-month targets, a risk-based recommendation and a monthly plan to reach it.">
+<link rel="canonical" href="https://fundshield.fixoraa.tech/">
+<meta property="og:title" content="FundShield — Emergency Fund Calculator: How Many Months of Cover Do You Have?">
+<meta property="og:description" content="Free emergency fund calculator. See your months of expense cover, staged 1/3/6-month targets, a risk-based recommendation and a monthly plan to reach it.">
+<meta property="og:url" content="https://fundshield.fixoraa.tech/">
+<meta property="og:type" content="website">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--pri:#1D4ED8;--acc:#F97316;--bgc:#EFF6FF}
+body{background:var(--bgc);font-family:'Segoe UI',system-ui,sans-serif}
+.pri{background:var(--pri)} .prit{color:var(--pri)} .acct{color:var(--acc)}
+.btn{background:var(--pri);color:#fff;padding:.6rem 1.2rem;border-radius:.6rem;font-weight:600;cursor:pointer;border:none}
+.btn:hover{opacity:.9} .btn2{background:var(--acc);color:#111;padding:.6rem 1.2rem;border-radius:.6rem;font-weight:600;cursor:pointer;border:none}
+input,select,textarea{border:1.5px solid #cbd5e1;border-radius:.55rem;padding:.55rem .7rem;width:100%;background:#fff;color:#0f172a}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--pri);border-color:transparent}
+label{font-size:.83rem;font-weight:600;display:block;margin-bottom:.3rem}
+.card{background:#fff;border-radius:1rem;box-shadow:0 8px 30px rgba(15,23,42,.08);padding:1.4rem}
+article p{margin:.7rem 0;line-height:1.75;color:#334155}
+article h2{font-size:1.45rem;font-weight:800;margin:1.6rem 0 .4rem;color:#0f172a}
+.faq{background:#fff;border-radius:.7rem;padding:.9rem 1.1rem;margin:.55rem 0;box-shadow:0 2px 10px rgba(15,23,42,.05)}
+.faq summary{font-weight:700;cursor:pointer}
+table.dt{width:100%;border-collapse:collapse} table.dt th,table.dt td{border:1px solid #e2e8f0;padding:.45rem .6rem;text-align:left;font-size:.9rem}
+table.dt th{background:#f1f5f9}
+
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "FundShield", "url": "https://fundshield.fixoraa.tech/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Free emergency fund calculator. See your months of expense cover, staged 1/3/6-month targets, a risk-based recommendation and a monthly plan to reach it."}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many months of expenses should an emergency fund hold?", "acceptedAnswer": {"@type": "Answer", "text": "Three months suits stable dual-income households; six months is the standard for single earners; freelancers and business owners should target six to twelve. FundShield recommends a figure from the income-stability profile you select."}}, {"@type": "Question", "name": "Should I count my full salary or just expenses?", "acceptedAnswer": {"@type": "Answer", "text": "Expenses \u2014 and only the essential ones: housing, food, bills, insurance, school fees and minimum loan payments. Discretionary spending stops in a real emergency, so including it inflates the target and discourages you."}}, {"@type": "Question", "name": "Where is the best place to keep an emergency fund?", "acceptedAnswer": {"@type": "Answer", "text": "A separate savings account for the first month, and a liquid or overnight fund for the rest works well: instant access, minimal volatility. Avoid equity, lock-ins and anything with an exit load for this money."}}, {"@type": "Question", "name": "Should I build an emergency fund before paying off debt?", "acceptedAnswer": {"@type": "Answer", "text": "Keep a small one-month buffer, then destroy high-interest debt first \u2014 credit cards especially. Holding cash at 5 percent while paying 40 percent interest loses money every month. Rebuild the full fund once expensive debt is gone."}}, {"@type": "Question", "name": "What counts as a real emergency?", "acceptedAnswer": {"@type": "Answer", "text": "Job loss, medical needs, essential home or vehicle repairs, and urgent family situations. Sales, upgrades and celebrations do not qualify. Defining the rule in advance protects the fund from your own impulses."}}, {"@type": "Question", "name": "How often should I review my emergency fund?", "acceptedAnswer": {"@type": "Answer", "text": "Twice a year, and after any major life change \u2014 a new job, a child, a home loan, a move. Your cover in months changes as expenses change, even when the balance stays the same."}}]}</script>
+</head>
+<body id="top">
+<header class="sticky top-0 z-40 shadow-md" style="background:#1E3A8A">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 py-3 flex items-center justify-between">
+    <a href="#top" class="text-xl font-extrabold tracking-tight" style="color:#EFF6FF">🛡 FundShield</a>
+    <nav class="flex gap-5 text-sm font-semibold" style="color:#EFF6FF">
+      <a href="#top" class="hover:underline">Home</a>
+      <a href="https://fixoraa.tech" class="hover:underline">More Tools</a>
+    </nav>
+  </div>
+</header>
+<div class="no-print mx-auto max-w-6xl px-4 sm:px-6 pt-4" role="complementary" aria-label="Advertisement">
+  <div class="mx-auto text-center" style="max-width:728px">
+    <span class="block text-[10px] tracking-[0.18em] uppercase text-slate-400 mb-1.5">Advertisement</span>
+    <div class="flex justify-center overflow-hidden">
+      <div class="origin-top scale-[0.44] sm:scale-100 shrink-0">
+        <script>
+          atOptions = { 'key' : '4e68ac77881c17fe128a46565d9a4e8c', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
+        </script>
+        <script src="https://www.highrevenueformat.com/4e68ac77881c17fe128a46565d9a4e8c/invoke.js"></script>
+      </div>
+    </div>
+  </div>
+</div>
+<main class="mx-auto max-w-6xl px-4 sm:px-6 py-8">
+  <div class="text-center mb-6">
+    <h1 class="text-3xl sm:text-4xl font-extrabold" style="color:#0f172a">Emergency Fund Calculator</h1>
+    <p class="mt-2 text-slate-600 max-w-2xl mx-auto">Job loss, a medical bill, a car breakdown — an emergency fund is what stops a bad month becoming a debt spiral. FundShield measures your cover in months of expenses and builds your staged plan to strengthen it.</p>
+    <span class="inline-block mt-3 px-3 py-1 rounded-full text-xs font-bold text-white pri">✓ Unlimited Free Usage — No Signup, No Watermark</span>
+  </div>
+  <div class="grid md:grid-cols-5 gap-6">
+  <div class="card md:col-span-2 space-y-3">
+    <div><label>Monthly essential expenses (rent, food, bills, EMIs)</label><input id="exp" type="number" value="45000"></div>
+    <div><label>Current emergency savings</label><input id="sav" type="number" value="90000"></div>
+    <div><label>You can save per month towards the fund</label><input id="can" type="number" value="10000"></div>
+    <div><label>Income stability</label><select id="risk"><option value="1">Stable salaried job, dual income</option><option value="2">Single income / one employer</option><option value="3">Freelance, business or variable income</option></select></div>
+    <button class="btn w-full" onclick="calc()">Build My Shield</button>
+  </div>
+  <div class="card md:col-span-3">
+    <div class="text-center"><div class="text-sm font-bold">YOUR CURRENT COVER</div><div id="cover" class="text-5xl font-extrabold prit">–</div><div id="rec" class="mt-1 text-slate-600"></div></div>
+    <div class="w-full bg-slate-200 rounded-full h-4 my-4"><div id="bar" class="h-4 rounded-full pri" style="width:0%"></div></div>
+    <div id="stages" class="grid grid-cols-5 gap-2 text-center text-sm"></div>
+    <div id="plan" class="mt-4 font-semibold"></div>
+    <div class="overflow-x-auto mt-3"><table class="dt" id="tbl"></table></div>
+  </div></div>
+</main>
+<div class="no-print mx-auto max-w-6xl px-4 sm:px-6 pb-4" role="complementary" aria-label="Advertisement">
+  <div class="mx-auto text-center" style="max-width:728px">
+    <span class="block text-[10px] tracking-[0.18em] uppercase text-slate-400 mb-1.5">Advertisement</span>
+    <div class="flex justify-center overflow-hidden">
+      <script async src="https://js.wpadmngr.com/static/adManager.js" data-admpid="464498"></script>
+    </div>
+  </div>
+</div>
+<section class="mx-auto max-w-4xl px-4 sm:px-6 pb-6">
+  <article>
+  <h2>Why an emergency fund comes before investing</h2>
+<p>Every investment plan quietly assumes your life goes smoothly. An emergency fund is the plan for when it does not. Without one, a single job loss or hospital bill forces the worst financial moves at the worst moment: credit cards at punishing interest, personal loans taken in panic, or long-term investments sold at a loss. With three to six months of essential expenses parked safely, the same event becomes an inconvenience instead of a spiral. That is why experienced planners treat the emergency fund not as an investment at all, but as insurance you pay yourself — and why it is built before chasing market returns.</p>
+<p>FundShield measures your position the way professionals do: in months of cover. Absolute numbers mislead — ₹1 lakh is generous for a single renter and thin for a family with a home loan — but months of essential expenses scale naturally with your life. The calculator also stages the journey, because 'save six months of expenses' feels impossible from zero, while 'reach one month' is a target almost anyone can hit in a season. Momentum, not perfection, is what builds the shield.</p>
+<h2>How much cover do you actually need?</h2>
+<p>The classic answer is three to six months of expenses, but the honest answer depends on how replaceable your income is. A dual-income household with stable salaried jobs and no dependants can sleep well at three months. A single earner supporting a family, or anyone whose income is variable — freelancers, commission earners, small business owners — should aim for six to twelve, because their emergencies arrive with no salary still landing at month-end. FundShield's income-stability selector encodes exactly this logic and recommends a target accordingly.</p>
+<p>Count essential expenses, not your full salary: rent or EMI, groceries, utilities, insurance premiums, school fees, transport and minimum loan payments. The streaming subscriptions and weekend dining that vanish in a real emergency should not inflate the target. Recalculate your essential number honestly — most people discover their true survival budget is 60 to 75 percent of normal spending, which makes the goal noticeably closer than they feared.</p>
+<h2>Where to keep the money</h2>
+<p>An emergency fund has two jobs — be there instantly, and not lose value — which rules out both extremes. Equity funds fail the first test on exactly the days you need them. A current account fails the second, quietly taxed by inflation and by the temptation of money that looks spare. The practical home for most people is a separate savings account or a liquid / overnight mutual fund: boring, stable, and reachable within a day. Separation matters more than the extra half percent of return — a fund mixed with everyday money gets spent on everyday 'emergencies' like sale-season shoes.</p>
+<p>Split the fund if it grows large: keep one month in an instant-access account for true same-day needs, and the rest in a liquid fund where it earns a little more without meaningfully slowing access. Never lock emergency money into instruments with exit loads, lock-ins or market swings. The return on an emergency fund is measured in disasters that did not become debts, not in percentage points.</p>
+<h2>Building the fund, stage by stage</h2>
+<p>Start with stage one: a single month of essentials. It is small enough to reach quickly and already covers the most common shocks — a phone replacement, a minor repair, a delayed salary. Stage two takes you to three months, the point where a job loss becomes a job search instead of a crisis. Stage three completes your recommended cover. FundShield shows each stage's amount and ticks them off as your balance passes them, because visible progress is what keeps a savings habit alive across months.</p>
+<p>Fund the stages automatically. A standing transfer the day after salary day — even ₹2,000 — beats heroic intentions, because it never depends on willpower at month-end. Direct every windfall's first slice here too: bonuses, refunds, gifts, the sale of unused things. And when you do use the fund, using it is success, not failure: refill it as the first priority afterwards, before celebrations and before extra investing.</p>
+<h2>Mistakes that quietly drain the shield</h2>
+<p>The commonest mistake is defining 'emergency' loosely. A fund raided for holidays, gadget upgrades and festive shopping is not a fund; it is delayed spending. Write your own rule before you need it — job loss, medical needs, essential repairs, urgent family travel — and let everything else wait for a separate savings goal. The second mistake is building the fund while carrying credit-card debt: paying 40 percent interest to hold cash earning 5 percent is arithmetic self-harm. Kill expensive debt first, keep a one-month mini-buffer, then build the full shield.</p>
+<p>The third mistake is forgetting the fund grows stale. Expenses creep, a child arrives, an EMI begins — and last year's six months becomes this year's four. Recheck your cover twice a year with this calculator; two minutes of honesty keeps the shield at strength. The fourth is telling yourself you will 'just use the credit card and repay it' — in a real emergency, repayment capacity is exactly what has been damaged.</p>
+<h2>After the shield: what comes next</h2>
+<p>Once you reach your recommended cover, do not keep piling cash indefinitely. Money far beyond twelve months of expenses, sitting idle, loses purchasing power every year. Move the overflow into your long-term goals — retirement, a home, children's education — where time lets it work properly. Keep the fund itself untouched at target strength, reviewed as life changes. That balance — safety below, growth above — is the entire architecture of a calm financial life, and it starts with the unglamorous, life-saving buffer you built here.</p>
+<h2>The psychology of the untouchable account</h2>
+<p>An emergency fund works partly through a trick of labelling: money named 'emergency' spends differently from money named 'savings', even in the same bank. Behavioural research on mental accounting shows that earmarked funds are raided far less, which is why the separate account matters as much as the amount. Strengthen the effect by making the fund slightly inconvenient — a different bank, no card attached — while keeping it reachable within a day: the goal is a speed bump for impulses, not a vault against genuine need. Couples should agree the emergency definition together, in writing, on a calm day; a fund governed by two different private definitions will be governed by whichever is looser at 11 p.m. during a sale.</p>
+<p>Expect the fund to feel pointless for long stretches — that is what success feels like from inside. Insurance always looks wasted until the day it is the only thing standing between a problem and a catastrophe. When the urge comes to 'put it to work' in something exciting, remember its actual return: every crisis in your future that ends as an anecdote instead of a debt. Recompute your cover above whenever life changes, and let the shield quietly grow with the life it protects.</p>
+<h2>A two-minute monthly ritual</h2>
+<p>Once the fund exists, maintain it like a pilot's checklist rather than a hope. On the first weekend of each month, open this page, enter the current balance, and read your cover in months — a single number that rises, holds or falls, each with its own small instruction. Rising: carry on, the system works. Holding while expenses grew: nudge the monthly transfer up by the same percentage your rent rose. Falling without an emergency to explain it: some spending has quietly reclassified itself as essential, and the honest fix is upstream, in the budget, not in this calculator. Two minutes, once a month, keeps a shield at strength for decades — the cheapest financial appointment you will ever keep, and the one whose absence is discovered only on the worst possible day.</p>
+  <h2>Frequently Asked Questions</h2>
+  <details class="faq"><summary>How many months of expenses should an emergency fund hold?</summary><p>Three months suits stable dual-income households; six months is the standard for single earners; freelancers and business owners should target six to twelve. FundShield recommends a figure from the income-stability profile you select.</p></details>
+<details class="faq"><summary>Should I count my full salary or just expenses?</summary><p>Expenses — and only the essential ones: housing, food, bills, insurance, school fees and minimum loan payments. Discretionary spending stops in a real emergency, so including it inflates the target and discourages you.</p></details>
+<details class="faq"><summary>Where is the best place to keep an emergency fund?</summary><p>A separate savings account for the first month, and a liquid or overnight fund for the rest works well: instant access, minimal volatility. Avoid equity, lock-ins and anything with an exit load for this money.</p></details>
+<details class="faq"><summary>Should I build an emergency fund before paying off debt?</summary><p>Keep a small one-month buffer, then destroy high-interest debt first — credit cards especially. Holding cash at 5 percent while paying 40 percent interest loses money every month. Rebuild the full fund once expensive debt is gone.</p></details>
+<details class="faq"><summary>What counts as a real emergency?</summary><p>Job loss, medical needs, essential home or vehicle repairs, and urgent family situations. Sales, upgrades and celebrations do not qualify. Defining the rule in advance protects the fund from your own impulses.</p></details>
+<details class="faq"><summary>How often should I review my emergency fund?</summary><p>Twice a year, and after any major life change — a new job, a child, a home loan, a move. Your cover in months changes as expenses change, even when the balance stays the same.</p></details>
+  </article>
+</section>
+<footer class="mt-6 py-8" style="background:#1E3A8A;color:#EFF6FF">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 text-center text-sm">
+    <p class="font-bold text-base">FundShield</p>
+    <p class="opacity-80 mt-1">Free emergency fund calculator. See your months of expense cover, staged 1/3/6-month targets, a risk-based recommendation and a monthly plan to reach it.</p>
+    <p class="mt-2"><a href="#top" class="underline">Home</a> · <a href="https://fixoraa.tech" class="underline">More Tools</a></p>
+    <p class="fx-credit" style="text-align:center;font-size:12.5px;opacity:.62;margin:10px auto 2px;letter-spacing:.01em">Made by <a href="https://fixoraa.tech" target="_blank" rel="noopener" style="color:inherit;font-weight:700;text-decoration:underline;text-underline-offset:2px">Fixoraa</a></p>
+  </div>
+</footer>
+<script id="lib-fundshield">
+
+function fundPlan(monthlyExpenses, currentSavings, monthlyCanSave, riskFactor){
+  var monthsCover = monthlyExpenses>0 ? currentSavings/monthlyExpenses : 0;
+  var targets = [1,3,6,9,12].map(function(m){return {months:m, amount:Math.round(monthlyExpenses*m)};});
+  var recommended = riskFactor>=3 ? 12 : riskFactor===2 ? 6 : 3;
+  var gap = Math.max(0, monthlyExpenses*recommended - currentSavings);
+  var monthsToGoal = monthlyCanSave>0 ? Math.ceil(gap/monthlyCanSave) : -1;
+  return {monthsCover:Math.round(monthsCover*10)/10, targets:targets, recommended:recommended, gap:Math.round(gap), monthsToGoal:monthsToGoal};
+}
+if (typeof module!=="undefined") module.exports={fundPlan:fundPlan};
+
+</script>
+<script>
+
+function fmt(n){return '₹'+n.toLocaleString('en-IN');}
+function calc(){
+  var r=fundPlan(+document.getElementById('exp').value,+document.getElementById('sav').value,+document.getElementById('can').value,+document.getElementById('risk').value);
+  document.getElementById('cover').textContent=r.monthsCover+' months';
+  document.getElementById('rec').textContent='Recommended cover for your profile: '+r.recommended+' months. Gap to close: '+fmt(r.gap)+'.';
+  document.getElementById('bar').style.width=Math.min(100,r.monthsCover/r.recommended*100)+'%';
+  document.getElementById('stages').innerHTML=r.targets.map(function(t){var done=+document.getElementById('sav').value>=t.amount;return '<div class="p-2 rounded-lg '+(done?'bg-blue-100':'bg-slate-100')+'"><div class="font-extrabold">'+t.months+' mo</div><div>'+fmt(t.amount)+'</div><div>'+(done?'✅ done':'pending')+'</div></div>';}).join('');
+  document.getElementById('plan').textContent= r.gap===0 ? '🎉 You are at or beyond your recommended cover. Consider topping up yearly as expenses grow, and invest anything far above 12 months — idle cash loses value to inflation.' : (r.monthsToGoal>0 ? 'Saving '+fmt(+document.getElementById('can').value)+' a month, you reach '+r.recommended+' months of cover in about '+r.monthsToGoal+' months.' : 'Add a monthly saving amount to see your timeline.');
+  var bal=+document.getElementById('sav').value, can=+document.getElementById('can').value, rows='', m=0;
+  while(bal < +document.getElementById('exp').value*r.recommended && m<60){ m++; bal+=can; if(m%3===0||bal>=+document.getElementById('exp').value*r.recommended) rows+='<tr><td>Month '+m+'</td><td>'+fmt(bal)+'</td><td>'+(Math.round(bal/+document.getElementById('exp').value*10)/10)+' months cover</td></tr>'; }
+  document.getElementById('tbl').innerHTML='<tr><th>Checkpoint</th><th>Fund balance</th><th>Cover</th></tr>'+rows;
+}
+calc();
+
+</script>
+</body>
+</html>
